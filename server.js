@@ -11,17 +11,18 @@ var articles={
             title:'Article One | Aarohi',
             heading:'Article One',
             content:`
-            <p>
+                 <p>
                         This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
-              </p>
+                 </p>
               
-              <p>
+                 <p>
                         This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
-               </p>
+                 </p>
               
-                <p>
+                  <p>
                         This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
-                 </p>`
+                 </p>
+                        `
 },
         'article-two':{
             title:'Article Two | Aarohi',
