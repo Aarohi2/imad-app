@@ -6,26 +6,40 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleone={
-    title:'Article One | Aarohi',
-    heading:'Article One',
-    content:` <p>
-                This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
-            </p>
-        </div>
-        
-         <div>
-            <p>
-                This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
-            </p>
-        </div>
-         <div>
-            <p>
-                This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
-            </p>`
-            
+var articles={
+        'article-one':{
+            title:'Article One | Aarohi',
+            heading:'Article One',
+            content:` <p>
+                        This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
+                    </p>
+                </div>
+                
+                 <div>
+                    <p>
+                        This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
+                    </p>
+                </div>
+                 <div>
+                    <p>
+                        This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
+                    </p>`
+},
+        'article-two':{
+            title:'Article Two | Aarohi',
+            heading:'Article Two',
+            content:` <p>
+                        This is my second article.    
+                    </p>`
+},
+        'article-three':{
+            title:'Article Three | Aarohi',
+            heading:'Article Three',
+            content:` <p>
+                        This is my third article.    
+                    </p>`
+},
 };
-
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
@@ -66,17 +80,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-    res.send(createTemplete(articleone));
+app.get('/:articleNames', function (req, res) {
+    var articleName=req.paems.articleName;
+    res.send(createTemplete(articles[articleName]));
 });
 
-app.get('/article-two', function (req, res) {
-     res.sendFile(path.join(__dirname, 'ui', 'article-two.html')); 
-});
 
-app.get('/article-three', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));   
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
