@@ -5,6 +5,60 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleone={
+    title:'Article One | Aarohi',
+    heading:'Article One',
+    content:` <p>
+                This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
+            </p>
+        </div>
+        
+         <div>
+            <p>
+                This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
+            </p>
+        </div>
+         <div>
+            <p>
+                This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
+            </p>
+            `
+};
+
+function createTemplate(data){
+    var title = data.title;
+    var heading = data.heading;
+    var content = data.content;
+    var htmlTemplete=`
+    <html>
+         <head>
+                 <title>
+                     ${title}
+                 </title>    
+                    <link href="/ui/style.css" rel="stylesheet" />
+         
+         </head>
+         <body>
+       
+                 <div class="container">
+                 <div>
+                    <a href="/">Home</a>
+                 </div>
+                 <hr/>
+                 <div>
+                     ${heading}
+                 </div>
+        
+                 <div>
+                     ${content}
+                 </div>
+                 </div>
+         </body>
+    
+    </html>
+`;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
