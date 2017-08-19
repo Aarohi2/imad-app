@@ -13,14 +13,11 @@ var articles={
             content:` <p>
                         This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
                     </p>
-                </div>
-                
-                 <div>
+              
                     <p>
                         This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
                     </p>
-                </div>
-                 <div>
+              
                     <p>
                         This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.        
                     </p>`
